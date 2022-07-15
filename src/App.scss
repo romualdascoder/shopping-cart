@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "sofia-pro", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+select {
+  appearance: none;
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none;
+}

@@ -1,0 +1,13 @@
+@use "abstracts" as *;
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  @include smMaxBreakPoint {
+    flex-direction: column;
+    justify-content: start;
+    min-height: 200px;
+  }
+}

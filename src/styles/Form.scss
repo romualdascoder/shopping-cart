@@ -1,0 +1,282 @@
+@use "abstracts" as *;
+
+.form {
+  width: 59%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: $bg-color;
+  padding-left: 150px !important;
+  @include mdMaxBreakPoint {
+    padding-left: 80px !important;
+    width: 50%;
+  }
+  @include smMaxBreakPoint {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px 50px 15px !important;
+  }
+  .title {
+    max-width: 640px;
+    width: 100%;
+    margin: 51px 55px 0px 50px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: $main-txt-color;
+    @include mdMaxBreakPoint {
+      margin: 51px 40px 0px 50px;
+    }
+    @include smMaxBreakPoint {
+      width: 100%;
+      margin: 10px;
+      margin: 30px 15px 0px 20px;
+    }
+  }
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+    width: 100%;
+    min-height: 796px;
+    background-color: $white-bg-color;
+    border: 1px solid #e9d6c5;
+    border-radius: 6px;
+    margin: 10px 55px 50px 50px;
+    @include mdMaxBreakPoint {
+      margin: 10px 40px 50px 50px;
+    }
+    @include smMaxBreakPoint {
+      width: 100% !important;
+      min-height: 500px;
+      margin: 10px;
+      padding-left: 0px;
+    }
+    form {
+      padding: 30px 24px 0px 24px;
+      display: flex;
+      flex-direction: column;
+      @include smMaxBreakPoint {
+        padding: 20px 16px 0px 16px;
+      }
+      .customerFields {
+        display: flex;
+        flex-direction: column;
+        .customerTitle {
+          h3 {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 140%;
+            color: $main-txt-color;
+            font-family: "Work Sans";
+          }
+          p {
+            padding: 4px 0px 16px 0px;
+            color: #bdbdbd;
+            line-height: 16px;
+            font-size: 12px;
+          }
+        }
+        .customerInfo {
+          display: flex;
+          @include smMaxBreakPoint {
+            flex-direction: column;
+          }
+          .customerInput {
+            @extend %input;
+            height: 48px;
+            max-width: 288px;
+            width: 100%;
+
+            @include smMaxBreakPoint {
+              max-width: 100%;
+              &:nth-child(1) {
+                margin-right: 0px;
+                margin-bottom: 17px;
+              }
+            }
+            &:nth-child(1) {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+      .shippingFields {
+        h3 {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 140%;
+          color: $main-txt-color;
+          padding: 30px 0px 16px 0px;
+          font-family: "Work Sans";
+        }
+        .shippingInput {
+          @extend %input;
+          height: 48px;
+          width: 100%;
+        }
+
+        .selectInfo {
+          display: flex;
+          padding-top: 16px;
+          @include smMaxBreakPoint {
+            flex-direction: column;
+          }
+          .standartSelect {
+            border: 1px solid $border-color;
+            background: #ffffff;
+            border-radius: 3px;
+            font-size: 14px;
+            height: 48px;
+            padding: 12px;
+            max-width: 210px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 16px;
+            @include smMaxBreakPoint {
+              max-width: 100%;
+              margin-bottom: 17px;
+            }
+            p {
+              &:nth-child(1) {
+                font-size: 12px;
+                padding-bottom: 3px;
+                color: #828282;
+              }
+              &:nth-child(2) {
+                color: $input-txt-color;
+                font-size: 12px;
+                padding-bottom: 3px;
+              }
+            }
+          }
+          .postalInput {
+            @extend %input;
+            height: 48px;
+            max-width: 150px;
+            width: 100%;
+
+            @include smMaxBreakPoint {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      .paymentFields {
+        h3 {
+          font-size: 14px;
+          line-height: 140%;
+          color: $main-txt-color;
+          padding: 30px 0px 16px 0px;
+          font-family: "Work Sans";
+          font-weight: 600;
+        }
+        .creditCard {
+          max-width: 590px;
+          width: 100%;
+          border: 1px solid #f2f2f2;
+          border-radius: 6px;
+          background-color: $credit-card-bg;
+          h4 {
+            font-family: "Work Sans";
+            font-weight: 400;
+            background-color: #ffffff;
+            border-bottom: 1px solid $border-color;
+            color: $main-txt-color;
+            font-size: 14px;
+            padding: 18px 16px 16px 16px;
+          }
+          .cardDetails {
+            padding: 17px 17px 17px 15px;
+            @include smMaxBreakPoint {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            .cardInput {
+              @extend %input;
+              max-width: 560px;
+              width: 100%;
+              height: 48px;
+              margin-bottom: 17px;
+            }
+            .dateContainer {
+              display: flex;
+              width: 100%;
+              @include customMaxBreakPoint(550) {
+                justify-content: space-between;
+              }
+
+              .dateInput {
+                @extend %input;
+                max-width: 112px;
+                width: 100%;
+                height: 48px;
+                margin-right: 16px;
+
+                @include smMaxBreakPoint {
+                  max-width: 125px;
+                  width: 100%;
+                }
+                @include customMaxBreakPoint(550) {
+                  max-width: 100%;
+                }
+              }
+              .cvvInput {
+                @extend %input;
+                max-width: 112px;
+                width: 100%;
+                height: 48px;
+
+                @include smMaxBreakPoint {
+                  max-width: 125px;
+                  width: 100%;
+                }
+                @include customMaxBreakPoint(550) {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .orderBtn {
+        @extend %btn;
+        margin: 31px 0px 30px 0px;
+        box-shadow: 0px 4px 10px rgba(67, 40, 16, 0.24);
+        @include smMaxBreakPoint {
+          height: 48px;
+        }
+      }
+    }
+
+    .formLogos {
+      max-width: 592px;
+      width: 100%;
+      margin: 0 auto;
+      .formLogosWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 30px 57px 30px;
+        img {
+          max-width: 100px;
+          width: 20%;
+          @include smMaxBreakPoint {
+            width: 25%;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

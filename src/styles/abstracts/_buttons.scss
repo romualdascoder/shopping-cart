@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+%btn {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  max-width: 592px;
+  width: 100%;
+  height: 56px;
+  border-radius: 3px;
+  letter-spacing: 0.07em;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #009900;
+}

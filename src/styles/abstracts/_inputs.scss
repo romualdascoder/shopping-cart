@@ -1,0 +1,10 @@
+@use "variables" as *;
+
+%input {
+  border: 1px solid $border-color;
+  background: #ffffff;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 12px;
+  color: $input-txt-color;
+}
